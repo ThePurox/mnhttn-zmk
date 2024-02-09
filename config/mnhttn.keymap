@@ -28,6 +28,14 @@
 };
 
 / {
+    chosen {
+      zmk,battery = &vbatt;
+    };
+
+    vbatt: vbatt {
+        compatible = "zmk,battery-nrf-vddh";
+    };
+
     behaviors {
         ht: hold_tap {
 	    compatible = "zmk,behavior-hold-tap";
