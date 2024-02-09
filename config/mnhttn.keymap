@@ -92,7 +92,7 @@
         adjust_layer {
             label= "ADJ";
 	    bindings = <
-                &sys_reset      &bt BT_CLR      &out OUT_TOG    &trans          &trans                &trans          &trans          &out OUT_TOG    &bt BT_CLR      &sys_reset
+                &sys_reset      &bt BT_CLR_ALL  &out OUT_TOG    &trans          &trans                &trans          &trans          &out OUT_TOG    &bt BT_CLR_ALL  &sys_reset
                 &bootloader     &bt BT_NXT      &trans          &trans          &trans                &trans          &trans          &trans          &bt BT_NXT      &bootloader
                 &trans          &bt BT_PRV      &trans          &trans          &trans                &trans          &trans          &trans          &bt BT_PRV      &trans
                                                 &trans          &trans          &trans                &trans          &trans          &trans
