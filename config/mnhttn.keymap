@@ -11,22 +11,6 @@
 #define NUM  3
 #define ADJ  4
 
-&mt {
-  quick-tap-ms = <100>;
-  flavor = "balanced";
-  // flavor = "tab-preferred";
-  // flavor = "hold-preferred";
-  tapping-term-ms = <170>;
-};
-
-&lt {
-  quick-tap-ms = <100>;
-  flavor = "balanced";
-  // flavor = "tab-preferred";
-  // flavor = "hold-preferred";
-  tapping-term-ms = <170>;
-};
-
 / {
     chosen {
       zmk,battery = &vbatt;
@@ -45,13 +29,27 @@
             quick-tap-ms = <100>;
 	    bindings = <&kp>, <&kp>;
 	};
+        mt: mod_tap {
+	    compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            quick-tap-ms = <100>;
+            flavor = "balanced";
+            tapping-term-ms = <170>;
+        };
+        lt: layer_tap {
+	    compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            quick-tap-ms = <100>;
+            flavor = "balanced";
+            tapping-term-ms = <170>;
+        };
     };
 
     keymap {
         compatible = "zmk,keymap";
         base_layer {
             label= "BASE";
-                bindings = <
+            bindings = <
                 &ht ESC DE_Q    &kp DE_W        &kp DE_E        &kp DE_R        &kp DE_T              &kp DE_Z        &kp DE_U        &kp DE_I        &kp DE_O        &kp DE_P
                 &mt LALT DE_A   &mt LCTRL DE_S  &mt LGUI DE_D   &mt LSHFT DE_F  &kp DE_G              &kp DE_H        &mt RSHFT DE_J  &mt RGUI DE_K   &mt RCTRL DE_L  &mt RALT DE_COLON
                 &kp DE_Y        &kp DE_X        &kp DE_C        &kp DE_V        &kp DE_B              &kp DE_N        &kp DE_M        &kp DE_COMMA    &kp DE_DOT      &kp DE_MINUS
@@ -83,7 +81,7 @@
             label= "NUM";
 	    bindings = <
                 &kp F1          &kp F2          &kp F3          &kp F4          &kp F5                &kp F6          &kp F7          &kp F8          &kp F9          &kp F10
-                &kp N1          &kp N2          &kp N3          &kp N4          &kp N5                &kp N6          &kp N7          &kp N8          &kp N9          &kp N0
+                &mt LALT N1     &mt LCTRL N2    &mt LGUI N3     &mt LSHFT N4    &kp N5                &kp N6          &mt RSHFT N7    &mt RGUI N8     &mt RCTRL N9    &mt RALT N0
                 &trans          &trans          &trans          &kp DE_COLON    &kp DE_DOT            &trans          &trans          &trans          &trans          &trans
                                                 &to ADJ         &trans          &trans                &kp DE_BSLH     &trans          &trans
             >;
