@@ -96,7 +96,6 @@
                 &kp Q          &kp G          &kp C          &kp D          &kp K          &kp DE_Z       &kp M          &kp DE_COMMA   &kp DE_DOT
                                               &my_lt NUM ESC &my_lt NAV SPACE &trans &trans &my_lt SYM E  &my_lt ADJ ENTER
             >;
-            >;
         };
 
         workman_layer {
