@@ -25,8 +25,9 @@
         };
         combo_z {
             timeout-ms = <40>;
-            key-positions = <18 19>;
+            key-positions = <21 22>;
             bindings = <&kp DE_Z>;
+            layers = <APT>;
         };
         combo_v {
             timeout-ms = <40>;
@@ -34,15 +35,29 @@
             bindings = <&kp V>;
             layers = <APT>;
         };
-        combo_slash {
+        combo_b {
             timeout-ms = <40>;
-            key-positions = <22 23>;
-            bindings = <&kp SLASH>;
+            key-positions = <12 3>;
+            bindings = <&kp B>;
+            layers = <APT>;
         };
-        combo_minus {
+        combo_k {
             timeout-ms = <40>;
-            key-positions = <21 22>;
-            bindings = <&kp MINUS>;
+            key-positions = <12 13>;
+            bindings = <&kp K>;
+            layers = <APT>;
+        };
+        combo_x {
+            timeout-ms = <40>;
+            key-positions = <16 17>;
+            bindings = <&kp X>;
+            layers = <APT>;
+        };
+        combo_j {
+            timeout-ms = <40>;
+            key-positions = <6 17>;
+            bindings = <&kp J>;
+            layers = <APT>;
         };
         combo_esc {
             timeout-ms = <40>;
@@ -200,7 +215,7 @@
         base_layer {
             label= "BASE";
             bindings = <
-                &kp V          &kp W          &kp F          &kp P          &kp K          &kp J          &kp L          &kp U          &kp DE_Y       &kp DE_Z
+                &kp V          &kp W          &kp F          &kp P          &kp K          &kp J          &kp L          &kp DE_Y       &kp U          &kp DE_Z
                 &hl LCTRL R    &hl LALT S     &hl LGUI T     &hl LSHFT H    &hl RALT B     &hr RALT X     &hr RSHFT N    &hr RGUI A     &hr LALT I     &hr RCTRL O
                 &kp Q          &kp G          &kp C          &kp D          &kp K          &kp DE_Z       &kp M          &kp DE_COMMA   &kp DE_DOT     &kp E
                                               &my_lt NUM ESC &my_lt NAV SPACE &kp E &kp E &my_lt SYM E  &my_lt ADJ ENTER
