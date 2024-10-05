@@ -93,8 +93,8 @@
             bindings = <
                 &kp V          &kp W          &kp F          &kp P          &kp K          &kp J          &kp L          &kp U          &kp DE_Y       &kp DE_Z
                 &hl LCTRL R    &hl LALT S     &hl LGUI T     &hl LSHFT H    &hl RALT B     &hr RALT X     &hr RSHFT N    &hr RGUI A     &hr LALT I     &hr RCTRL O
-                &kp Q          &kp G          &kp C          &kp D          &kp K          &kp DE_Z       &kp M          &kp DE_COMMA   &kp DE_DOT     &trans
-                                              &my_lt NUM ESC &my_lt NAV SPACE &trans &trans &my_lt SYM E  &my_lt ADJ ENTER
+                &kp Q          &kp G          &kp C          &kp D          &kp K          &kp DE_Z       &kp M          &kp DE_COMMA   &kp DE_DOT     &kp E
+                                              &my_lt NUM ESC &my_lt NAV SPACE &kp E &kp E &my_lt SYM E  &my_lt ADJ ENTER
             >;
         };
 
