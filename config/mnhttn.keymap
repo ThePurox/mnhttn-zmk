@@ -6,6 +6,7 @@
 #include "keys_de.h"
 
 #define BASE 0
+#define APT 0
 #define WMAN 1
 #define SYM  2
 #define NAV  3
