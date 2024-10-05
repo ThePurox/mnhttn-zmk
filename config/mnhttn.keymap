@@ -14,6 +14,18 @@
 #define ADJ  5
 
 / {
+  macros {
+  macro_sch:
+    macro_sch {
+      label = "Macro_sch";
+      compatible = "zmk,behavior-macro";
+#binding - cells = < 0>;
+      bindings = <&macro_tap & kp S & macro_release & kp RSHIFT & macro_tap & kp C & kp H>;
+    };
+  };
+};
+
+/ {
     combos {
         compatible = "zmk,combos";
 /* usually on base layer */
@@ -57,6 +69,12 @@
             timeout-ms = <40>;
             key-positions = <6 17>;
             bindings = <&kp J>;
+            layers = <APT>;
+        };
+        combo_sch {
+            timeout-ms = <40>;
+            key-positions = <10 13>;
+            bindings = <&macro_sch>;
             layers = <APT>;
         };
         combo_esc {
@@ -217,7 +235,7 @@
             bindings = <
                 &kp V          &kp W          &kp F          &kp P          &kp K          &kp J          &kp L          &kp DE_Y       &kp U          &kp DE_Z
                 &hl LCTRL R    &hl LALT S     &hl LGUI T     &hl LSHFT H    &hl RALT B     &hr RALT X     &hr RSHFT N    &hr RGUI A     &hr LALT I     &hr RCTRL O
-                &kp Q          &kp G          &kp C          &kp D          &kp K          &kp DE_Z       &kp M          &kp DE_COMMA   &kp DE_DOT     &kp E
+                &kp Q          &kp C          &kp G          &kp D          &kp K          &kp DE_Z       &kp M          &kp DE_COMMA   &kp DE_DOT     &kp E
                                               &my_lt NUM ESC &my_lt NAV SPACE &kp E &kp E &my_lt SYM E  &my_lt ADJ ENTER
             >;
         };
